@@ -1,6 +1,10 @@
 Changelog for POE::Component::IRC::Plugin::CoreList
 ===================================================
 
+1.00	Fri Apr 17 21:17:25 BST 2009
+	- Import repo into git
+	- bump to stable release
+
 0.06	Mon May 12 14:43:33 BST 2008
 	- Removed kwalitee and add LICENSE information
 

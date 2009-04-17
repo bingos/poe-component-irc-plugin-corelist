@@ -6,7 +6,7 @@ use Module::CoreList;
 use POE::Component::IRC::Plugin qw(:ALL);
 use vars qw($VERSION);
 
-$VERSION = '0.06';
+$VERSION = '1.00';
 
 my $cmds  = qr/find|search|release|date/;
 
@@ -152,7 +152,7 @@ which will let you know what modules shipped with which versions of perl, over I
 
 =over 
 
-=item new
+=item C<new>
 
 Creates a new plugin object. Takes some optional parameter:
 
@@ -174,9 +174,9 @@ The bot understand the following subcommands:
 
 =over 4
 
-=item * release
+=item * C<release>
 
-=item * date
+=item * C<date>
 
     < you> bot: release Test::More
     < bot> you: Test::More was first released with perl 5.7.3 (patchlevel perl/15039, released on 2002-03-05)
@@ -186,9 +186,9 @@ If no command is given, C<release> is the default.
     < you> bot: Test::More
     < bot> you: Test::More was first released with perl 5.7.3 (patchlevel perl/15039, released on 2002-03-05)
 
-=item * search
+=item * C<search>
 
-=item * find
+=item * C<find>
 
     < you> bot search Data
     < bot> Found Data::Dumper, Module::Build::ConfigData
@@ -214,7 +214,7 @@ Philippe "BooK" Bruhat, C<< <book@cpan.org> >>
 
 =head1 LICENSE
 
-Copyright C<(c)> Chris Williams and Philippe Bruhat.
+Copyright E<copy> Chris Williams and Philippe Bruhat.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
