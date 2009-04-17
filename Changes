@@ -1,0 +1,11 @@
+Changelog for POE::Component::IRC::Plugin::CoreList
+===================================================
+
+0.06	Mon May 12 14:43:33 BST 2008
+	- Removed kwalitee and add LICENSE information
+
+0.04	Tue Apr 15 12:28:02 BST 2008
+	- Kwalitee fixes.
+
+0.02	Tue Mar  4 14:20:18 GMT 2008
+	- Initial CPAN Release
