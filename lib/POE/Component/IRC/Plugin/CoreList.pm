@@ -6,7 +6,7 @@ use Module::CoreList;
 use POE::Component::IRC::Plugin qw(:ALL);
 use vars qw($VERSION);
 
-$VERSION = '1.00';
+$VERSION = '1.02';
 
 my $cmds  = qr/find|search|release|date/;
 
@@ -75,15 +75,20 @@ sub _corelist {
         my ( $release, $patchlevel, $date )
             = ( Module::CoreList->first_release($module), '', '' );
         if ($release) {
-            $patchlevel = $Module::CoreList::patchlevel{$release}
-                ? join( "/", @{ $Module::CoreList::patchlevel{$release} } )
-                : '';
             $date  = $Module::CoreList::released{$release};
+        }
+        my $rem;
+        if ( Module::CoreList->can('removed_from') ) {
+          my $removed = Module::CoreList->removed_from($module);
+          if ( $removed ) {
+            my $remdate = $Module::CoreList::released{$removed};
+            $rem = " and removed from $removed (released on $remdate)";
+          }
         }
         $reply = $release
             ? "$module was first released with perl $release ("
-            . ( $patchlevel ? "patchlevel $patchlevel, " : '' )
             . "released on $date)"
+            . ( $rem ? $rem : '' )
             : "$module is not in the core";
   }
   return $reply;

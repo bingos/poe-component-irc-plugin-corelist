@@ -1,6 +1,10 @@
 Changelog for POE::Component::IRC::Plugin::CoreList
 ===================================================
 
+1.02  Thu May 13 14:41:31 BST 2010
+  - Added support for new Module::CoreList removed_from()
+    function.
+
 1.00	Fri Apr 17 21:17:25 BST 2009
 	- Import repo into git
 	- bump to stable release

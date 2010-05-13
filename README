@@ -55,7 +55,8 @@ DESCRIPTION
     of perl, over IRC.
 
 CONSTRUCTOR
-    new Creates a new plugin object. Takes some optional parameter:
+    "new"
+        Creates a new plugin object. Takes some optional parameter:
 
           'command', define a command that will proceed subcommands;
           'privmsg', set to a true value to specify that the bot should reply with PRIVMSG instead of 
@@ -69,9 +70,9 @@ IRC USAGE
   Commands
     The bot understand the following subcommands:
 
-    *   release
+    *   "release"
 
-    *   date
+    *   "date"
 
             < you> bot: release Test::More
             < bot> you: Test::More was first released with perl 5.7.3 (patchlevel perl/15039, released on 2002-03-05)
@@ -81,9 +82,9 @@ IRC USAGE
             < you> bot: Test::More
             < bot> you: Test::More was first released with perl 5.7.3 (patchlevel perl/15039, released on 2002-03-05)
 
-    *   search
+    *   "search"
 
-    *   find
+    *   "find"
 
             < you> bot search Data
             < bot> Found Data::Dumper, Module::Build::ConfigData
@@ -104,6 +105,12 @@ AUTHORS
     Chris "BinGOs" Williams <chris@bingosnet.co.uk>
 
     Philippe "BooK" Bruhat, "<book@cpan.org>"
+
+LICENSE
+    Copyright © Chris Williams and Philippe Bruhat.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 
 SEE ALSO
     POE::Component::IRC
