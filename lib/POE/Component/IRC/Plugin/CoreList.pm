@@ -1,12 +1,11 @@
 package POE::Component::IRC::Plugin::CoreList;
 
+#ABSTRACT: A POE::Component::IRC plugin that provides Module::CoreList goodness.
+
 use strict;
 use warnings;
 use Module::CoreList;
 use POE::Component::IRC::Plugin qw(:ALL);
-use vars qw($VERSION);
-
-$VERSION = '1.02';
 
 my $cmds  = qr/find|search|release|date/;
 
@@ -94,12 +93,13 @@ sub _corelist {
   return $reply;
 }
 
-1;
-__END__
+qq[Apple::Core];
 
-=head1 NAME
+=pod
 
-POE::Component::IRC::Plugin::CoreList - A POE::Component::IRC plugin that provides Module::CoreList goodness.
+=for Pod::Coverage PCI_register PCI_unregister S_msg S_public
+
+=cut
 
 =head1 SYNOPSIS
 
@@ -211,20 +211,8 @@ The search never returns more than 9 replies, to avoid flooding the channel:
 
 =back
 
-=head1 AUTHORS
-
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
-
-Philippe "BooK" Bruhat, C<< <book@cpan.org> >>
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams and Philippe Bruhat.
-
-This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
-
 =head1 SEE ALSO
 
-L<POE::Component::IRC> 
+L<POE::Component::IRC>
 
 L<Bot::BasicBot::Pluggable::Module::CoreList>
